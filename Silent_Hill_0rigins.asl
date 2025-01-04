@@ -59,6 +59,10 @@ init {
 		switch (fileVersion)
 		{
 			// Add new versions to the top.
+			case "v1.18.1": vars.MemorySpaceOffset = 0xFBA860; break;
+        	case "v1.18": vars.MemorySpaceOffset = 0xFBCF90; break;
+			case "v1.17.1": vars.MemorySpaceOffset = 0xF9B000; break;
+        	case "v1.17": vars.MemorySpaceOffset = 0xF95EA0; break;
 			case "v1.16.6" : vars.MemorySpaceOffset = 0xF71E30; break;			
 			case "v1.16.5" : vars.MemorySpaceOffset = 0xF71E60; break;			
 			case "v1.16.4" : vars.MemorySpaceOffset = 0xF70E60; break;			
