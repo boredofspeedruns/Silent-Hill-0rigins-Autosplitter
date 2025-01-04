@@ -1,8 +1,8 @@
 /*
-*	SH 0rigins IGT Display v1.02 (19/11/2023)
-*	GitHub: https://github.com/roxasunbanned/Silent-Hill-0rigins-Autosplitter
+*	SH 0rigins IGT Display v1.03 (04/01/2025)
+*	GitHub: https://github.com/boredofspeedruns/Silent-Hill-0rigins-Autosplitter
 *	Currently supports:
-*		PPSSPP: 64-bit executable, v1.4-v1.14.1 and v1.15-v1.16.6
+*		PPSSPP: 64-bit executable, v1.4-v1.14.1 and v1.15-v1.18.1
 *		Game: US [ULUS10285], JP [ULJM05281], EU [ULES00869]
 *	Contributors:
 *		Parik: Emulator version detection via signature scanning
@@ -114,7 +114,7 @@ init {
 
 	// Add IGT to MemoryWatchers
 	vars.MemoryWatchers = new MemoryWatcherList();
-	vars.MemoryWatchers.Add(new MemoryWatcher<float>(new DeepPointer(vars.MemorySpaceOffset, vars.IGT_offset)) { Name = "IGT" });										
+	vars.MemoryWatchers.Add(new MemoryWatcher<float>(new DeepPointer(vars.MemorySpaceOffset, vars.IGT_offset)) { Name = "IGT" });	
 }
 
 update {
@@ -127,7 +127,6 @@ update {
 	var minutes = Math.Floor(time / 60);
 	var seconds =  time - minutes * 60;
 	vars.IGT = minutes.ToString("00") + "m " + seconds.ToString("00") + "s";
-	
 	return true;
 }
 
